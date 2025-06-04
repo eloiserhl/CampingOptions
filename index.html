@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive FAQ</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 1rem;
+    }
+    h2 {
+      margin-top: 2rem;
+      color: #444;
+    }
+    .faq-item {
+      border-bottom: 1px solid #ccc;
+      padding: 0;
+      margin-bottom: 1rem;
+    }
+    .faq-question {
+      background-color: #ed1b23;
+      color: white;
+      font-weight: bold;
+      padding: 1rem;
+      cursor: pointer;
+    }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease, padding 0.3s ease;
+      padding: 0 1rem;
+      background: #f9f9f9;
+    }
+    .faq-item.active .faq-answer {
+      max-height: 500px;
+      padding: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>FAQ</h1>
+
+  <h2>🎕 Beach Front Camping - RHL Activities</h2>
+  <div class="faq-item">
+    <div class="faq-question">Is Beach Front Camping available?</div>
+    <div class="faq-answer">This is now sold out. There is no reserve list for this camping and if a space becomes available it will be posted on our Facebook and Instagram pages first. Please note there is also no Premier or BYC Camping for 2025.</div>
+  </div>
+
+  <h2>📅 Riverside Holiday Village</h2>
+  <div class="faq-item">
+    <div class="faq-question">What does Riverside Holiday Village offer?</div>
+    <div class="faq-answer">
+      <ul>
+        <li>Hard Standing Pitches with Electric Hook-Ups – no muddy awnings!</li>
+        <li>Licensed Bar & Clubhouse – now with Sports Bar and Beer Garden</li>
+        <li>Launderette – wash, dry, iron, and wash-up facilities</li>
+        <li>Dog-Walking Field & Adventure Play Area</li>
+        <li>Indoor Arcade & Kids Zone</li>
+        <li>Accessible Flat Grounds – ideal for all visitors</li>
+        <li>Wi-Fi, Heated Shower/Toilet Blocks & Private Parking</li>
+        <li>On-Site Warden & 24hr CCTV</li>
+        <li>Convenience Store – stocked daily with essentials</li>
+      </ul>
+      Find out more and prices here: <a href="https://www.westcountryparks.co.uk">West Country Parks</a>
+    </div>
+  </div>
+
+  <h2>⛳️ Weston Golf Club Camping</h2>
+  <div class="faq-item">
+    <div class="faq-question">What are the details for Weston Golf Club Camping?</div>
+    <div class="faq-answer">
+      Weston Golf club is a 5 minute walk from the beach and is a fan favourite for our riders and spectators.<br><br>
+      <strong>Price:</strong> £170 per pitch<br>
+      <strong>Wristbands:</strong> Adult £10 each, Child (under 12) FREE<br>
+      Wristbands are required for access to and from the campsite.<br><br>
+      <strong>Pitch Size:</strong> 8M X 7M<br><br>
+      <strong>Arrival Time:</strong><br>
+      Friday 3rd October 2025 — 10:00 to 21:00<br>
+      Saturday 4th October 2025 — No Access (Registration Closed)<br>
+      Sunday 5th October 2025 — No Access (Registration Closed)<br><br>
+      <strong>Departure:</strong><br>
+      Sunday 5th October 2025 — Exit by 19:00
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      document.querySelectorAll('.faq-question').forEach(q => {
+        q.addEventListener('click', function () {
+          const item = q.closest('.faq-item');
+          item.classList.toggle('active');
+        });
+      });
+    });
+  </script>
+</body>
+</html>
